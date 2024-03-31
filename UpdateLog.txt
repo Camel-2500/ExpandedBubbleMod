@@ -1,0 +1,60 @@
+Update note (ver1.2)
+
+Enemy
+- Maidforce Bubbly Gun
+  Almost the same as Heavy Weapons Maid
+  Using the bubble machine gun, apply the Kronos Bubble
+- Bubble Witch
+  Using her bubble wand, blow bubble a lot
+  Sometimes, use magic to trap them in magic bubble
+- Bubbler Zombie
+  Special attack using a bubble katana that traps in a magic soap bubble
+
+Weapon
+- Bubble Katana
+  Wait 10 turn to attack that enemy trap in bubble
+
+- Bubble Wand
+  Trapping the enemy in a bubble with a melee attack
+  Range attacks expend power and blow bubble
+  When gagged, you need more ancient power source
+
+- Bubble Machine Gun
+  Medium crash damage to enemies with melee attacks
+  Range attacks expend power and 4 bubble bullets
+  Reload need 2 turns
+
+- Illegal modification Bubble Machine Gun
+  Looks the same as Bubble Machine Gun
+  But reload don't need 2 turns
+
+Moving bubble
+  Bubble will move randomly
+  Not much movement from the original position
+
+Kronos Bubble
+  Bubbles as large as the palm of your hand, not large enough to envelop a person
+  Used by Bubble Turret and Maid Force Bubbly Gun
+  Don't inflate like kronos trap but  bubble spread when struggle
+
+Bubble Gag
+  Functions is the same as sutffing
+  But harder to remove than stuffing
+  Applied by enemies using kronos bubble
+
+------------
+- Changed point
+  Bubble turret don't blow big bubble but blow small bubble (kronos bubble) any time
+------------
+Issues
+- Some text don't work well
+- Kronos bubble hide under layer's restrains
+- Bubbler zombie can't use magic soap bubble again
+- Bubble wand can boss and dragons trap in bubble
+- The time to debuff the enemy does not coincide with the time to be trapped in the bubble
+------------
+
+Not yet effective,
+ball suit head, plug gag, seamless latex straitjacket
+names(name: "BallSuitHead",name: "LatexPlugGag",name: "LatexPlugGagClosed",name: "LatexSeamlessTransportJacket")
+https://ptb.discord.com/channels/938203644023685181/1148672254213898280/1222963331523149904

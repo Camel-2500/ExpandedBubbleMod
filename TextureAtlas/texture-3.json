@@ -1,0 +1,63 @@
+{
+  "frames": {
+    "1Back.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1659,
+        "h": 2570
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1659,
+        "h": 2570
+      },
+      "sourceSize": {
+        "w": 1659,
+        "h": 2570
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BalloonForStuffer.png": {
+      "frame": {
+        "x": 1659,
+        "y": 0,
+        "w": 1701,
+        "h": 2537
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1701,
+        "h": 2537
+      },
+      "sourceSize": {
+        "w": 1701,
+        "h": 2537
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture-3.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3360,
+      "h": 2570
+    },
+    "scale": 1
+  }
+}

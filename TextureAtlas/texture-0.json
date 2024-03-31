@@ -1,0 +1,831 @@
+{
+  "frames": {
+    "1Front.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1775,
+        "h": 3413
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1775,
+        "h": 3413
+      },
+      "sourceSize": {
+        "w": 1775,
+        "h": 3413
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Upeer.png": {
+      "frame": {
+        "x": 0,
+        "y": 3413,
+        "w": 669,
+        "h": 675
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 669,
+        "h": 675
+      },
+      "sourceSize": {
+        "w": 669,
+        "h": 675
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BallSuitHead.png": {
+      "frame": {
+        "x": 669,
+        "y": 3413,
+        "w": 624,
+        "h": 657
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 624,
+        "h": 657
+      },
+      "sourceSize": {
+        "w": 624,
+        "h": 657
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos4BootsHogtie.png": {
+      "frame": {
+        "x": 1293,
+        "y": 3413,
+        "w": 993,
+        "h": 642
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 993,
+        "h": 642
+      },
+      "sourceSize": {
+        "w": 993,
+        "h": 642
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "4Front.png": {
+      "frame": {
+        "x": 2286,
+        "y": 3413,
+        "w": 1772,
+        "h": 349
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1772,
+        "h": 349
+      },
+      "sourceSize": {
+        "w": 1772,
+        "h": 349
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos.png": {
+      "frame": {
+        "x": 2286,
+        "y": 3762,
+        "w": 327,
+        "h": 341
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 327,
+        "h": 341
+      },
+      "sourceSize": {
+        "w": 327,
+        "h": 341
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos1Kneel.png": {
+      "frame": {
+        "x": 2627,
+        "y": 3762,
+        "w": 327,
+        "h": 341
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 327,
+        "h": 341
+      },
+      "sourceSize": {
+        "w": 327,
+        "h": 341
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2Shoulde.png": {
+      "frame": {
+        "x": 2968,
+        "y": 3762,
+        "w": 320,
+        "h": 325
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 325
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 325
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2ShoulderHogtie.png": {
+      "frame": {
+        "x": 3288,
+        "y": 3762,
+        "w": 325,
+        "h": 320
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 325,
+        "h": 320
+      },
+      "sourceSize": {
+        "w": 325,
+        "h": 320
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2ShoulderKneel.png": {
+      "frame": {
+        "x": 3608,
+        "y": 3762,
+        "w": 320,
+        "h": 325
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 325
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 325
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleMittenRightCrossed.png": {
+      "frame": {
+        "x": 3928,
+        "y": 3762,
+        "w": 124,
+        "h": 131
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 124,
+        "h": 131
+      },
+      "sourceSize": {
+        "w": 124,
+        "h": 131
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleMittenLeftCrossed.png": {
+      "frame": {
+        "x": 3928,
+        "y": 3886,
+        "w": 100,
+        "h": 206
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 206
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 206
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos5Kneel.png": {
+      "frame": {
+        "x": 1775,
+        "y": 0,
+        "w": 1204,
+        "h": 2113
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1204,
+        "h": 2113
+      },
+      "sourceSize": {
+        "w": 1204,
+        "h": 2113
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleHairOrnaments.png": {
+      "frame": {
+        "x": 3888,
+        "y": 0,
+        "w": 208,
+        "h": 212
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 208,
+        "h": 212
+      },
+      "sourceSize": {
+        "w": 208,
+        "h": 212
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "LatexHole.png": {
+      "frame": {
+        "x": 3888,
+        "y": 212,
+        "w": 335,
+        "h": 172
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 335,
+        "h": 172
+      },
+      "sourceSize": {
+        "w": 335,
+        "h": 172
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Closed.png": {
+      "frame": {
+        "x": 3888,
+        "y": 547,
+        "w": 98,
+        "h": 121
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleGag.png": {
+      "frame": {
+        "x": 4009,
+        "y": 547,
+        "w": 95,
+        "h": 72
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 95,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 95,
+        "h": 72
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Mouth.png": {
+      "frame": {
+        "x": 3888,
+        "y": 645,
+        "w": 98,
+        "h": 121
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 121
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 121
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BalloonString.png": {
+      "frame": {
+        "x": 3888,
+        "y": 743,
+        "w": 91,
+        "h": 609
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 91,
+        "h": 609
+      },
+      "sourceSize": {
+        "w": 91,
+        "h": 609
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos4Boots.png": {
+      "frame": {
+        "x": 1775,
+        "y": 1352,
+        "w": 1125,
+        "h": 1014
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1125,
+        "h": 1014
+      },
+      "sourceSize": {
+        "w": 1125,
+        "h": 1014
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos3Boots.png": {
+      "frame": {
+        "x": 1775,
+        "y": 2477,
+        "w": 920,
+        "h": 731
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 920,
+        "h": 731
+      },
+      "sourceSize": {
+        "w": 920,
+        "h": 731
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos4HandFront.png": {
+      "frame": {
+        "x": 2789,
+        "y": 1204,
+        "w": 800,
+        "h": 1001
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 800,
+        "h": 1001
+      },
+      "sourceSize": {
+        "w": 800,
+        "h": 1001
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleMittenLeftFree.png": {
+      "frame": {
+        "x": 3790,
+        "y": 1352,
+        "w": 302,
+        "h": 301
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 302,
+        "h": 301
+      },
+      "sourceSize": {
+        "w": 302,
+        "h": 301
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleMittenRightFree.png": {
+      "frame": {
+        "x": 3790,
+        "y": 1653,
+        "w": 302,
+        "h": 300
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 302,
+        "h": 300
+      },
+      "sourceSize": {
+        "w": 302,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos4HandFrontHogtie.png": {
+      "frame": {
+        "x": 2506,
+        "y": 2477,
+        "w": 973,
+        "h": 804
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 973,
+        "h": 804
+      },
+      "sourceSize": {
+        "w": 973,
+        "h": 804
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos4CrotchKneel.png": {
+      "frame": {
+        "x": 3479,
+        "y": 2004,
+        "w": 612,
+        "h": 368
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 612,
+        "h": 368
+      },
+      "sourceSize": {
+        "w": 612,
+        "h": 368
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos4CrotchHogtie.png": {
+      "frame": {
+        "x": 3479,
+        "y": 2372,
+        "w": 546,
+        "h": 596
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 546,
+        "h": 596
+      },
+      "sourceSize": {
+        "w": 546,
+        "h": 596
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2BootsKneel.png": {
+      "frame": {
+        "x": 3479,
+        "y": 2918,
+        "w": 491,
+        "h": 514
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 491,
+        "h": 514
+      },
+      "sourceSize": {
+        "w": 491,
+        "h": 514
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos1Hogtie.png": {
+      "frame": {
+        "x": 2789,
+        "y": 2004,
+        "w": 381,
+        "h": 396
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 381,
+        "h": 396
+      },
+      "sourceSize": {
+        "w": 381,
+        "h": 396
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos1.png": {
+      "frame": {
+        "x": 2286,
+        "y": 3762,
+        "w": 327,
+        "h": 341
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 327,
+        "h": 341
+      },
+      "sourceSize": {
+        "w": 327,
+        "h": 341
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2BootsHogtie.png": {
+      "frame": {
+        "x": 2789,
+        "y": 2004,
+        "w": 381,
+        "h": 396
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 381,
+        "h": 396
+      },
+      "sourceSize": {
+        "w": 381,
+        "h": 396
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2Shoulder.png": {
+      "frame": {
+        "x": 2968,
+        "y": 3762,
+        "w": 320,
+        "h": 325
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 325
+      },
+      "sourceSize": {
+        "w": 320,
+        "h": 325
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleMittenLeftYoked.png": {
+      "frame": {
+        "x": 3790,
+        "y": 1352,
+        "w": 302,
+        "h": 301
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 302,
+        "h": 301
+      },
+      "sourceSize": {
+        "w": 302,
+        "h": 301
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleMittenRightYoked.png": {
+      "frame": {
+        "x": 3790,
+        "y": 1653,
+        "w": 302,
+        "h": 300
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 302,
+        "h": 300
+      },
+      "sourceSize": {
+        "w": 302,
+        "h": 300
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture-0.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 4096,
+      "h": 4092
+    },
+    "scale": 1
+  }
+}

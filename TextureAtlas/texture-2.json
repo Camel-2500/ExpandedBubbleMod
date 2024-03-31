@@ -1,0 +1,159 @@
+{
+  "frames": {
+    "BubbleKronos4.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1125,
+        "h": 3025
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1125,
+        "h": 3025
+      },
+      "sourceSize": {
+        "w": 1125,
+        "h": 3025
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos3.png": {
+      "frame": {
+        "x": 0,
+        "y": 3025,
+        "w": 920,
+        "h": 2541
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 920,
+        "h": 2541
+      },
+      "sourceSize": {
+        "w": 920,
+        "h": 2541
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Balloon.png": {
+      "frame": {
+        "x": 1125,
+        "y": 0,
+        "w": 1910,
+        "h": 2762
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1910,
+        "h": 2762
+      },
+      "sourceSize": {
+        "w": 1910,
+        "h": 2762
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "BubbleKronos2Boots.png": {
+      "frame": {
+        "x": 1125,
+        "y": 1910,
+        "w": 484,
+        "h": 2458
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 484,
+        "h": 2458
+      },
+      "sourceSize": {
+        "w": 484,
+        "h": 2458
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Loweer.png": {
+      "frame": {
+        "x": 3583,
+        "y": 1910,
+        "w": 547,
+        "h": 511
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 547,
+        "h": 511
+      },
+      "sourceSize": {
+        "w": 547,
+        "h": 511
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "TransparentBalloon.png": {
+      "frame": {
+        "x": 1125,
+        "y": 0,
+        "w": 1910,
+        "h": 2762
+      },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1910,
+        "h": 2762
+      },
+      "sourceSize": {
+        "w": 1910,
+        "h": 2762
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture-2.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 4094,
+      "h": 3945
+    },
+    "scale": 1
+  }
+}

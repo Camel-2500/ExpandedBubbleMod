@@ -90,6 +90,8 @@ KinkyDungeonWeapons["BubbleWand"] = {
 }
 KDEventMapWeapon["tick"]["IsGagged"] = (e, data) => {
     if (KinkyDungeonGagTotal() > 0.0) {
+            
+            /*
         KinkyDungeonWeapons["BubbleWand"] = {
             name: "BubbleWand",
             dmg: 0.5,
@@ -114,8 +116,12 @@ KDEventMapWeapon["tick"]["IsGagged"] = (e, data) => {
             ],
             special: { type: "spell", spell: "GaggedBlowBubble", requiresEnergy: true, energyCost: 0.015, range: 12 },
         }
+           */
+           BubbleWand.special={ type: "spell", spell: "GaggedBlowBubble", requiresEnergy: true, energyCost: 0.015, range: 12 },
+        }
     }
     else {
+/*
         KinkyDungeonWeapons["BubbleWand"] = {
             name: "BubbleWand",
             dmg: 0.5,
@@ -139,6 +145,8 @@ KDEventMapWeapon["tick"]["IsGagged"] = (e, data) => {
             ],
             special: { type: "spell", spell: "PlayerBlowBubble", requiresEnergy: true, energyCost: 0.001, range: 12 },
         }
+*/
+    BubbleWand.special = { type: "spell", spell: "PlayerBlowBubble", requiresEnergy: true, energyCost: 0.001, range: 12 },
     }
 }
 

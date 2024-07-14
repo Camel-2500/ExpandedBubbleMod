@@ -1,11 +1,5 @@
 //KinkyDungeonStatStaminaRegenWait = 10
 
-//これをいじると、１ターンあたりのスタミナ回復量が変化
-//KinkyDungeonStatStaminaRegen = 10
-
-//ちなこの辺のやつ（gag_stateによるスタミナ回復の変化）は、deathcosmos二キがやってた
-//まぁ、LatexBallSuit関係は違うから別にしてもいいけどね
-//あとdeathcosmos二キは、gag_state以外にも、他の変数と組み合わせてるっぽい
 
 //上限変更
 //KinkyDungeonChangeStamina(10);

@@ -1,4 +1,3 @@
-
 KDBaseDamageTypes.staminaTypesWeak.push("soap");
 
 KinkyDungeonDamageTypes["soap"] = {name: "soap", color: "#02ddf5", bg: "black"}

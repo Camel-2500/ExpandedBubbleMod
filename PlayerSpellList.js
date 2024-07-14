@@ -1,32 +1,4 @@
 KinkyDungeonSpellListEnemies.push(
-    //Bubble Turret Spells
-    //to weapon
-    {
-        name: "shotbubble",
-
-        hitsfx: "Shock",
-        sfx: "Laser",
-
-        school: "Conjure",
-        manacost: 1,
-        components: [],
-        level: 1,
-        type: "bolt",
-        projectileTargeting: true,
-        nonVolatile: true,
-        onhit: "",
-        power: 2.5,
-        delay: 0,
-        noMiscast: true,
-        events: [{ trigger: "bulletHitEnemy", type: "ApplyBubble" },],
-
-        range: 12,
-        speed: 1,
-        damage: "stun",
-        playerEffect: { name: "bubblehitself", power: 3 }
-    },
-
-
     {
         name: "PlayerBlowBubble",
 

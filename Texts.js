@@ -101,6 +101,10 @@ else {
 	KinkyDungeonAddRestraintText("BubbleKronos5","Many bubbles","Too late...","All the bubbles on body have combined, and now face is the only part of my body that's free.")
 	KinkyDungeonAddRestraintText("BubbleGag","Bubble Gag","bubbles with elasticity","Big bubbles in the mouth and no matter how hard tried, can't spit them out...")
 
+	//restrainfunction
+
+	addTextKey("NoPickUp", "Tried to pick up items, but the film of bubbles prevented them from reaching them")
+
 	//Enemy
 	addTextKey("NameBubbleTurret", "Bubble Turret")
 	addTextKey("AttackBubbleTurret", "The turret defends itself with a close-range electrocution attack! (DamageTaken)")
@@ -190,7 +194,7 @@ else {
 	*/
 	addTextKey("KinkyDungeonSpellCastPlayerBlowBubble", "Using a wand, created a bubble.")
 
-	addTextKey("KinkyDungeonInventoryItemBubbleWand,", "Bubble Wand")
+	addTextKey("KinkyDungeonInventoryItemBubbleWand", "Bubble Wand")
 	addTextKey("KinkyDungeonInventoryItemBubbleWandDesc", "Comically large bubble wand\nDeals arcane damage\nIt can also be used to blow a bubble forwards.\n(need 1p 20mana)\nIf you are gaged, using arms\n(need 15p 20mana)")
 	addTextKey("KinkyDungeonInventoryItemBubbleWandDesc2", "Melee attacks cost cost a lot of stamina,\nbut will trap enemies inside bubbles,\nAn oversized bubble wand with a hole that you could easily climb through\nif you wanted to bubble yourself, \nbut you wouldn't do that... right..?")
 	addTextKey("KinkyDungeonSpellCastPlayerBubbleWand", "Using a wand, created a bubble.")

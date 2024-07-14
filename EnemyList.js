@@ -218,6 +218,4 @@ KinkyDungeonEnemies.push(
 		floors: KDMapInit(["grv", "tmb"]),
 		dropTable: [{ name: "Gold", amountMin: 15, amountMax: 20, weight: 3.5 }, { name: "BubbleKatana", weight: 10, ignoreInInventory: true },]
 	},
-
-
 )

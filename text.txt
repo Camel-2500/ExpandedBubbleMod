@@ -1,0 +1,76 @@
+//KinkyDungeonStatStaminaRegenWait = 10
+
+//これをいじると、１ターンあたりのスタミナ回復量が変化
+//KinkyDungeonStatStaminaRegen = 10
+
+//ちなこの辺のやつ（gag_stateによるスタミナ回復の変化）は、deathcosmos二キがやってた
+//まぁ、LatexBallSuit関係は違うから別にしてもいいけどね
+//あとdeathcosmos二キは、gag_state以外にも、他の変数と組み合わせてるっぽい
+
+//上限変更
+//KinkyDungeonChangeStamina(10);
+//KinkyDungeonChangeMana(5);
+//KinkyDungeonChangeWill(5.0);
+
+/*
+KDExpressions.Edged.expression = (C) => {
+	return {
+		EyesPose: "EyesDazed",
+		Eyes2Pose: "Eyes2Dazed",
+		BrowsPose: "",
+		Brows2Pose: "",
+		BlushPose: "",
+		MouthPose: "",
+	};
+}
+*/
+
+KinkyDungeonStruggleGroupsBase = [
+	"unused_slot1",
+	"ItemAccessories",
+	"Drool",
+	"ItemShirt",
+	"ItemUnderShirt",
+	"ItemBra",
+
+	"unused_slot5",
+	"ItemGloveL",
+	"ItemGloveR",
+
+	"unused_slot5",
+	"unused_slot6",
+
+	"ItemSkirt",
+	"ItemPants",
+	"ItemPanties",
+	"unused_slot7",
+	"ItemStockingL",
+	"ItemStockingR",
+	"ItemBoots",
+
+	"State",
+	"ItemDevices",
+	"ItemH",
+	"ItemM",
+	"ItemEars",
+	"ItemNeck",
+	"ItemNeckRestraints",
+	"ItemArms",
+	"ItemBreast",
+	"ItemHands",
+	"ItemNipples",
+	"ItemTorso",
+	"ItemPelvis",
+	"ItemVulva",
+	"ItemVulvaPiercings",
+	"ItemButt",/// almost usless
+	"ItemLegs",
+	"ItemFeet",
+
+]
+
+KinkyDungeonCreateRestraint({inventory: false, name: "drool0", Group: "Drool",power: 20,Asset: "Boots1",
+	Model: "drool0",
+	AssetGroup: "Cloth",
+	escapeChance: {"Struggle": -2,"Remove": 6,}, enemyTags: {}, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Drool",]
+},"drool", "Cosmetic for those who watch you ", "you can't remove it if your arms are behind your back");

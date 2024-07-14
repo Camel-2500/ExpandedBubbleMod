@@ -166,7 +166,7 @@ AddModel
 
 AddModel({
 	Name: "BallSuitHead",
-	Folder: "Latex",
+	Folder: "Inflatable",
 	TopLevel: true,
 	Restraint: true,
 	Categories: ["Restraints", "Latex"],
@@ -183,12 +183,154 @@ AddModel({
 });
 
 AddModel({
+	Name: "ClamTrap",
+	Folder: "ClamTrap",
+	TopLevel: true,
+	Group: "Devices",
+	Restraint: true,
+	Categories: ["Restraints", "Furniture"],
+	AddPose: [],
+	Layers: ToLayerMap([
+
+		{
+			Name: "ClamBedTrapOpenFrontFront", Layer: "FurnitureFront", Pri: 40,
+			Invariant: true,
+			//EraseSprite: "Bubble",
+			OffsetX: -100,
+			OffsetY: 350,
+		},
+		{
+			Name: "ClamBedTrapOpenFront", Layer: "FurnitureBack", Pri: -40.9,
+			Invariant: true,
+			//EraseSprite: "Bubble",
+			OffsetX: -100,
+			OffsetY: 350,
+		},
+
+		{
+			Name: "ClamBedTrapOpenBack", Layer: "FurnitureBack", Pri: -41,
+			Invariant: true,
+			//EraseSprite: "Bubble",
+			//EraseLayers: ToMap(["Bubble"]),
+			OffsetX: -100,
+			OffsetY: 350,
+		},
+	])
+});
+
+
+AddModel({
+	Name: "ClamChest",
+	Folder: "ClamTrap",
+	TopLevel: true,
+	Group: "Devices",
+	Restraint: true,
+	Categories: ["Restraints", "Furniture"],
+	AddPose: [],
+	Layers: ToLayerMap([
+
+		{
+			Name: "ClamChestTrapOpenFrontFront", Layer: "FurnitureFront", Pri: 40,
+			Invariant: true,
+			//EraseSprite: "Bubble",
+			OffsetX: -100,
+			OffsetY: 350,
+		},
+		{
+			Name: "ClamChestTrapOpenFront", Layer: "FurnitureBack", Pri: -40.9,
+			Invariant: true,
+			//EraseSprite: "Bubble",
+			OffsetX: -100,
+			OffsetY: 350,
+		},
+
+		{
+			Name: "ClamChestTrapOpenBack", Layer: "FurnitureBack", Pri: -41,
+			Invariant: true,
+			//EraseSprite: "Bubble",
+			//EraseLayers: ToMap(["Bubble"]),
+			OffsetX: -100,
+			OffsetY: 350,
+		},
+	])
+});
+
+AddModel({
+	Name: "ClamBedClosed",
+	Folder: "ClamTrap",
+	TopLevel: true,
+	Group: "Devices",
+	Restraint: true,
+	Categories: ["Restraints", "Furniture"],
+	AddPose: [],
+	Layers: ToLayerMap([
+		{
+			Name: "ClamBedTrapCloseB", Layer: "FurnitureFront", Pri: 80,
+			Invariant: true,
+			EraseSprite: "ClamTrap",
+			OffsetX: -100,
+			OffsetY: 50,
+			//HidePoses: ToMap(["Xray"]),
+		}
+	])
+});
+
+AddModel({
+	Name: "ClamChestClosed",
+	Folder: "ClamTrap",
+	TopLevel: true,
+	Group: "Devices",
+	Restraint: true,
+	Categories: ["Restraints", "Furniture"],
+	AddPose: [],
+	Layers: ToLayerMap([
+		{
+			Name: "ClamChestTrapCloseBB", Layer: "FurnitureFront", Pri: 80,
+			Invariant: true,
+			EraseSprite: "ClamTrap",
+			OffsetX: -350,
+			OffsetY: 325,
+			//HidePoses: ToMap(["Xray"]),
+		}
+	])
+});
+
+AddModel({
+	Name: "Pearl",
+	Folder: "ClamTrap",
+	TopLevel: false,
+	Group: "Devices",
+	Restraint: true,
+	Categories: ["Restraints", "Furniture"],
+	AddPose: ["UprightHogtie", "PreferKneel", "ShiftRight"],
+	Layers: ToLayerMap([
+		{
+			Name: "PearlFront", Layer: "FurnitureFront", Pri: -40,
+			Invariant: true,
+			OffsetX: -150,
+			OffsetY: 500,
+			EraseSprite: "Bubble",
+			EraseLayers: ToMap(["Bubble"]),
+		},
+		{
+			Name: "PearlBack", Layer: "FurnitureBack", Pri: -40,
+			Invariant: true,
+			OffsetX: -150,
+			OffsetY: 500,
+			EraseSprite: "Bubble",
+			EraseLayers: ToMap(["Bubble"]),
+		},
+	])
+});
+
+
+AddModel({
 	Name: "MagicSoapBubble",
 	Folder: "SoapBubble",
 	TopLevel: true,
 	Group: "Devices",
 	Restraint: true,
-	Categories: ["Restraints", "Furniture", "Latex"],
+	Categories: ["Restraints", "Furniture"],
 	AddPose: ["UprightHogtie", "PreferKneel", "ShiftRight"],
 	Layers: ToLayerMap([
 		{
@@ -207,7 +349,7 @@ AddModel({
 	TopLevel: true,
 	Group: "Devices",
 	Restraint: true,
-	Categories: ["Restraints", "Furniture", "Latex"],
+	Categories: ["Restraints", "Furniture"],
 	AddPose: ["UprightHogtie", "PreferKneel", "ShiftRight"],
 	Layers: ToLayerMap([
 		{
@@ -267,26 +409,90 @@ AddModel({
 	Group: "Mouth",
 	Restraint: true,
 	Categories: ["Restraints", "Gags", "Latex"],
-	AddPose: ["FaceCoverGag"],
+	AddPose: ["FaceCoverGag", "StuffMouth"],
 	AddPoseConditional: {
 		Xray: ["HideMouth",],
 	},
 	Layers: ToLayerMap([
 		{
-			Name: "LatexHole", Layer: "GagFlat", Pri: 30,
+			Name: "LatexMaskHole", Layer: "GagFlat", Pri: 4.8,
 			OffsetX: 942,
 			OffsetY: 200,
 			Invariant: true,
 		},
 		{
-			Name: "Mouth", Layer: "Gag", Pri: 29.1,
+			Name: "Tongue", Layer: "GagFlat", Pri: 4.9,
 			OffsetX: 942,
 			OffsetY: 200,
 			Invariant: true,
 		},
+		{
+			Name: "Tongue2", Layer: "Gag", Pri: 4,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "NoPluged", Layer: "Gag", Pri: 3.9,
+			HidePoses: ToMap(["HideMouth"]),
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+
 	])
 });
 
+AddModel(GetModelRestraintVersion("LatexPlugGag", true));
+
+AddModel({
+	Name: "BADLatexPlugGag",
+	Folder: "Gags",
+	TopLevel: false,
+	Group: "Mouth",
+	Restraint: true,
+	Categories: ["Restraints", "Gags", "Latex"],
+	AddPose: ["FaceCoverGag", "StuffMouth"],
+	AddPoseConditional: {
+		Xray: ["HideMouth",],
+	},
+	Layers: ToLayerMap([
+		{
+			Name: "LatexMaskHole", Layer: "GagFlat", Pri: 4.7,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Tongue", Layer: "GagFlat", Pri: 4.8,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Tongue2", Layer: "Gag", Pri: 4,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "NoPluged", Layer: "Gag", Pri: 3.9,
+			HidePoses: ToMap(["HideMouth"]),
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "BreathAndDrool", Layer: "GagFlat", Pri: 4.9,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+
+	])
+});
+
+AddModel(GetModelRestraintVersion("BADLatexPlugGag", true));
 
 AddModel({
 	Name: "LatexPlugGagClosed",
@@ -295,91 +501,265 @@ AddModel({
 	Group: "Mouth",
 	Restraint: true,
 	Categories: ["Restraints", "Gags", "Latex"],
-	AddPose: ["FaceCoverGag"],
+	AddPose: ["FaceCoverGag", "StuffMouth"],
 	AddPoseConditional: {
 		Xray: ["HideMouth",],
 	},
 	Layers: ToLayerMap([
 		{
-			Name: "LatexHole", Layer: "GagFlat", Pri: 30,
+			Name: "LatexMaskHole", Layer: "GagFlat", Pri: 4.8,
 			OffsetX: 942,
 			OffsetY: 200,
 			Invariant: true,
 		},
 		{
-			Name: "Closed", Layer: "GagMuzzle", Pri: 14.1,
+			Name: "Plug", Layer: "GagFlatStraps", Pri: 4.9,
 			OffsetX: 942,
 			OffsetY: 200,
 			Invariant: true,
 		},
 		{
-			Name: "Mouth", Layer: "Gag", Pri: 14,
+			Name: "Pluged", Layer: "Gag", Pri: 4,
+			HidePoses: ToMap(["HideMouth"]),
 			OffsetX: 942,
 			OffsetY: 200,
 			Invariant: true,
 		},
+
 	])
 });
 
+AddModel(GetModelRestraintVersion("LatexPlugGagClosed", true));
+
+AddModel({
+	Name: "MuzzlePlugGag",
+	Folder: "Gags",
+	TopLevel: false,
+	Group: "Mouth",
+	Restraint: true,
+	Categories: ["Restraints", "Gags", "Latex"],
+	AddPose: ["FaceCoverGag", "StuffMouth"],
+	AddPoseConditional: {
+		Xray: ["HideMouth",],
+	},
+	Layers: ToLayerMap([
+		{
+			Name: "MuzzleHole", Layer: "GagFlat", Pri: 4.8,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Tongue", Layer: "GagFlat", Pri: 4.9,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Tongue2", Layer: "Gag", Pri: 4,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "NoPluged", Layer: "Gag", Pri: 3.9,
+			HidePoses: ToMap(["HideMouth"]),
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+
+	])
+});
+
+AddModel({
+	Name: "BADMuzzlePlugGag",
+	Folder: "Gags",
+	TopLevel: false,
+	Group: "Mouth",
+	Restraint: true,
+	Categories: ["Restraints", "Gags", "Latex"],
+	AddPose: ["FaceCoverGag", "StuffMouth"],
+	AddPoseConditional: {
+		Xray: ["HideMouth",],
+	},
+	Layers: ToLayerMap([
+		{
+			Name: "MuzzleHole", Layer: "GagFlat", Pri: 4.7,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Tongue", Layer: "GagFlat", Pri: 4.8,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Tongue2", Layer: "Gag", Pri: 4,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "NoPluged", Layer: "Gag", Pri: 3.9,
+			HidePoses: ToMap(["HideMouth"]),
+
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "BreathAndDrool", Layer: "GagFlat", Pri: 4.9,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+
+	])
+});
+
+AddModel({
+	Name: "MuzzlePlugGagClosed",
+	Folder: "Gags",
+	TopLevel: false,
+	Group: "Mouth",
+	Restraint: true,
+	Categories: ["Restraints", "Gags", "Latex"],
+	AddPose: ["FaceCoverGag", "StuffMouth"],
+	AddPoseConditional: {
+		Xray: ["HideMouth",],
+	},
+	Layers: ToLayerMap([
+		{
+			Name: "MuzzleHole", Layer: "GagFlat", Pri: 4.8,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Plug", Layer: "GagFlatStraps", Pri: 4.9,
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+		{
+			Name: "Pluged", Layer: "Gag", Pri: 4,
+			HidePoses: ToMap(["HideMouth"]),
+			OffsetX: 942,
+			OffsetY: 200,
+			Invariant: true,
+		},
+
+	])
+});
+
+
+
+
+
+//コルセットとかあると、表示おかしくなるきっと、元のやつでいうストラップ的なものが必要
 AddModel({
 	Name: "LatexJacket",
 	Folder: "Straitjacket",
 	TopLevel: true,
 	Restraint: true,
-	Categories: ["Restraints", "Jacket", "Leather"],
-	AddPose: ["EncaseTorsoUpper", "EncaseChest"],
+	Categories: ["Restraints", "Jacket",],
+	AddPose: ["EncaseTorsoUpper", "EncaseChest", "HideHands"],
 	Layers: ToLayerMap([
 		{
-			Name: "Upeer", Layer: "SleeveLeft", Pri: 90,
-			//Poses: ToMap(["Wristtie", "Boxtie", "Crossed"]),
-			/*
-			SwapLayerPose: {Crossed: "SleevesCrossArms"},
+			Name: "Arms", Layer: "SleeveLeft", Pri: 90,
 			HidePoses: ToMap(["WrapArms"]),
+			SwapLayerPose: { Crossed: "SleevesCrossArms" },
 			GlobalDefaultOverride: ToMap(["Crossed"]),
-			*/
+			//Poses: ToMap(["Wristtie", "Boxtie", "Crossed"]),
+			SwapLayerPose: { Crossed: "SleevesCrossArms" },
 			Invariant: true,
-
 		},
 		{
-			Name: "Loweer", Layer: "SuitChestOver", Pri: 80,
-			//Poses: ToMap(["Wristtie", "Boxtie", "Crossed"]),
-			/*
+			Name: "Chest", Layer: "SuitChestOver", Pri: 80,
 			HidePoses: ToMap(["WrapChest"]),
 			GlobalDefaultOverride: ToMap(["Crossed"]),
-			*/
-			//DisplacementSprite: "Jacket",
+			DisplacementSprite: "Jacket",
 			//DisplaceAmount: 70,
 			//DisplaceLayers: ToMap(["ArmsAll"]),
+			GlobalDefaultOverride: ToMap(["Crossed"]),
 			Invariant: true,
-
 		},
+		{
+			Name: "BinderTorsoLowers",
+			Layer: "Corset",
+			Pri: 30,
+			Invariant: true,
+		},
+		{
+			Name: "BeltsChestCrossed2mm", Layer: "BindChest", Pri: -10,
+			NoOverride: true,
+			Poses: ToMap(["Wristtie", "Boxtie", "Crossed"]),
+			GlobalDefaultOverride: ToMap(["Crossed"]),
+			Invariant: true,
+			HidePoses: ToMap(["WrapChest"]),
+		},
+
 	])
 });
-
-//KronosBubble
-
-/*
 AddModel({
-	Name: "BubbleKronos1",
-	Folder: "BubbleKronos",
-	TopLevel: false,
-	Group: "Devices",
+	Name: "LatexNoChestJacket",
+	Folder: "StraitjacketNoChest",
+	TopLevel: true,
 	Restraint: true,
-	Categories: ["Restraints","Furniture"],
-	AddPose: ["BubbleHogtie", "PreferKneel", "ShiftRight"],
+	Categories: ["Restraints", "Jacket",],
+	AddPose: ["EncaseTorsoUpper", "EncaseChest", "HideHands"],
 	Layers: ToLayerMap([
-		{ Name: "BubbleKronos1", Layer: "FurnitureFront", Pri: -40,
+		{
+			Name: "Arms", Layer: "SleeveLeft", Pri: 90,
+			HidePoses: ToMap(["WrapArms"]),
+			SwapLayerPose: { Crossed: "SleevesCrossArms" },
+			GlobalDefaultOverride: ToMap(["Crossed"]),
+			//Poses: ToMap(["Wristtie", "Boxtie", "Crossed"]),
+			SwapLayerPose: { Crossed: "SleevesCrossArms" },
 			Invariant: true,
-			EraseSprite: "Bubble",
-			EraseLayers: ToMap(["Bubble"]),
+		},
+		{
+			Name: "Chest", Layer: "SuitOver", Pri: 80,
+			HidePoses: ToMap(["WrapChest"]),
+			GlobalDefaultOverride: ToMap(["Crossed"]),
+			DisplacementSprite: "Jacket",
+			//DisplaceAmount: 70,
+			//DisplaceLayers: ToMap(["ArmsAll"]),
+			GlobalDefaultOverride: ToMap(["Crossed"]),
+			Invariant: true,
+		},
+		{
+			Name: "BinderTorsoLowers",
+			Layer: "Corset",
+			Pri: 30,
+			Invariant: true,
 		},
 	])
 });
-*/
+
+AddModel({
+	Name: "LatexLegbinder",
+	Folder: "Rubber",
+	Parent: "Rubber",
+	TopLevel: true,
+	Restraint: true,
+	Categories: ["Restraints", "Rubber"],
+	AddPose: ["FeetLinked", "EncaseTorsoLower", "EncaseLegs", "FeetLinked", "EncaseAnkles", "EncaseFeet"],
+	Layers: ToLayerMap([
+		...GetModelLayers("RubberThighs"),
+		...GetModelLayers("RubberTorsoLower"),
+		...GetModelLayers("RubberFeet"),
+		...GetModelLayers("RubberBoots"),
+	])
+});
+
 AddModel({
 	Name: "BubbleKronos1",
 	Folder: "BubbleKronos1",
-	TopLevel: false,
+	TopLevel: true,
 	Restraint: true,
 	Categories: ["Restraints",],
 	AddPose: [],
@@ -395,24 +775,6 @@ AddModel({
 		},
 	])
 });
-/*
-AddModel({
-	Name: "BubbleKronos2",
-	Folder: "BubbleKronos",
-	TopLevel: false,
-	Group: "Devices",
-	Restraint: true,
-	Categories: ["Restraints","Furniture"],
-	AddPose: ["BubbleHogtie", "PreferKneel", "ShiftRight"],
-	Layers: ToLayerMap([
-		{ Name: "BubbleKronos2", Layer: "FurnitureFront", Pri: -40,
-			Invariant: true,
-			EraseSprite: "Bubble",
-			EraseLayers: ToMap(["Bubble"]),
-		},
-	])
-});
-*/
 AddModel({
 	Name: "BubbleKronos2Boots",
 	Folder: "BubbleKronos2",
@@ -451,32 +813,6 @@ AddModel({
 		},
 	])
 });
-/*
-AddModel({
-	Name: "BubbleKronos3",
-	Folder: "BubbleKronos",
-	TopLevel: false,
-	Group: "Devices",
-	Restraint: true,
-	Categories: ["Restraints","Furniture"],
-	AddPose: ["BubbleHogtie", "PreferKneel", "ShiftRight"],
-	Layers: ToLayerMap([
-		{ Name: "BubbleKronos3", Layer: "FurnitureFront", Pri: -40,
-			Invariant: true,
-			EraseSprite: "Bubble",
-			EraseLayers: ToMap(["Bubble"]),
-		},
-	])
-});
-*/
-
-
-
-
-
-
-
-
 AddModel({
 	Name: "BubbleKronos3Shoulder",
 	Folder: "BubbleKronos3",
@@ -498,7 +834,6 @@ AddModel({
 		},
 	])
 });
-
 AddModel({
 	Name: "BubbleKronos3Boots",
 	Folder: "BubbleKronos3",
@@ -510,7 +845,7 @@ AddModel({
 		{
 			Name: "BubbleKronos3Boots", Layer: "FurnitureFront", Pri: -39,
 			//Poses: ToMap(["Closed", "KneelClosed",]),
-			GlobalDefaultOverride: ToMap(["KneelClosed"]),
+			//GlobalDefaultOverride: ToMap(["KneelClosed"]),
 			//DisplacementSprite: "TapeAnklesSquish",
 			//DisplaceLayers: ToMap(["RopeCalf"]),
 			Invariant: true,
@@ -520,8 +855,6 @@ AddModel({
 		},
 	])
 });
-
-
 AddModel({
 	Name: "BubbleKronos4Crotch",
 	Folder: "BubbleKronos4",
@@ -577,7 +910,7 @@ AddModel({
 
 	Layers: ToLayerMap([
 		{
-			Name: "BubbleKronos4Boots", Layer: "FurnitureFront", Pri: 72,
+			Name: "BubbleKronos4Boots", Layer: "InflatableLegs", Pri: 72,
 			//Poses: ToMap(["Closed", "KneelClosed",]),
 			MorphPoses: { Hogtie: "Hogtie", Kneel: "Kneel", KneelClosed: "Kneel", },
 
@@ -609,19 +942,18 @@ AddModel({
 
 //bubblemittens
 
-
 AddModel({
 	Name: "BubbleMittensLeft",
 	Folder: "BubbleMitts",
 	Categories: ["Gloves", "Mittens", "Restraints"],
 	Restraint: true,
-	AddPose: ["Mittens"],
+	AddPose: [],
 	Layers: ToLayerMap([
 		{
 			Name: "BubbleMittensLeft", Layer: "MittenLeft", Pri: 100,
-			Poses: ToMapSubtract([...ARMPOSES], ["Wristtie", "Boxtie", "Up"]),
-			GlobalDefaultOverride: ToMap(["Front", "Crossed"]),
-			SwapLayerPose: { Crossed: "CrossMittenLeft", Front: "ForeMittenLeft" },
+			//Poses: ToMapSubtract([...ARMPOSES], ["Wristtie", "Boxtie", "Up"]),
+			//GlobalDefaultOverride: ToMap(["Front", "Crossed"]),
+			//SwapLayerPose: { Crossed: "CrossMittenLeft", Front: "ForeMittenLeft" },
 			Invariant: true,
 
 			//EraseSprite: "Mitts",
@@ -635,12 +967,12 @@ AddModel({
 	Folder: "BubbleMitts",
 	Categories: ["Gloves", "Mittens", "Restraints"],
 	Restraint: true,
-	AddPose: ["Mittens"],
+	//AddPose: [],
 	Layers: ToLayerMap([
 		{
 			Name: "BubbleMittensRight", Layer: "MittenRight", Pri: 100,
-			Poses: ToMap([...ARMPOSES]),
-			GlobalDefaultOverride: ToMap(["Front", "Crossed"]),
+			//Poses: ToMap([...ARMPOSES]),
+			//GlobalDefaultOverride: ToMap(["Front", "Crossed"]),
 			Invariant: true,
 
 			//EraseSprite: "Mitts",
@@ -655,14 +987,180 @@ AddModel({
 	TopLevel: true,
 	Categories: ["Gloves", "Mittens", "Restraints"],
 	Restraint: true,
-	AddPose: ["Mittens"],
+	AddPose: [],
 	Layers: ToLayerMap([
-		...GetModelLayers("BubbleMittensLeft"),
-		...GetModelLayers("BubbleMittensRight"),
+		{
+			Name: "BubbleMittensLeft", Layer: "MittenLeft", Pri: 100,
+			Poses: ToMapSubtract([...ARMPOSES], ["Wristtie", "Boxtie", "Up"]),
+			GlobalDefaultOverride: ToMap(["Front", "Crossed"]),
+			//SwapLayerPose: { Crossed: "CrossMittenLeft", Front: "ForeMittenLeft" },
+			Invariant: true,
+
+			//EraseSprite: "Mitts",
+			//EraseLayers: ToMap(["Mitts"]),
+		},
+		{
+			Name: "BubbleMittensRight", Layer: "MittenRight", Pri: 100,
+			Poses: ToMap([...ARMPOSES]),
+			GlobalDefaultOverride: ToMap(["Front", "Crossed"]),
+			Invariant: true,
+
+			//EraseSprite: "Mitts",
+			//EraseLayers: ToMap(["Mitts"]),
+		},
+
+
 	])
 
 });
 
+//mermaid tail
+
+//StrapsUnderbustにしてるが、透過されないレイヤーAnkleなんたらにしとく必要がある
+//StrapsUnderbustにしてあるのは、Ankleなんたらだと、股あたりの表示が上手くいかないから
+//つまり、股あたりで元画像を分割したほうがいいかも
+
+//結論 
+//つまり、nonuseを使用することで、元のポーズを活用することにした
+//なので、nonuseを足隠せるよう工夫が必要
+//他の方法としては、Erase機能を使って、特定の部位を消去する方法がある
+AddModel({
+	Name: "BubblyMermaidTail",
+	Folder: "BubblyMermaidTail",
+	TopLevel: true,
+	Restraint: true,
+	Categories: ["Restraints",],
+	Layers: ToLayerMap([
+		{
+			Name: "BubblyMermaidTailCrotch", Layer: "WrappingTorsoLower", Pri: 100,
+			//Poses: ToMap([...FOOTRIGHTPOSES]),
+			Invariant: true,
+			MorphPoses: { Hogtie: "Hogtie", Kneel: "Kneel", KneelClosed: "Kneel", },
+
+			//DisplacementSprite: "AnkleCuffRight",
+			//DisplaceLayers: ToMap(["LegCuffs"]),
+		},
+		{
+			Name: "BubblyMermaidTailLeg", Layer: "WrappingLegsOver2", Pri: 100,
+			//Poses: ToMap([...FOOTRIGHTPOSES]),
+			Invariant: true,
+			MorphPoses: { Hogtie: "Hogtie", Kneel: "Kneel", KneelClosed: "Kneel", },
+
+			//DisplacementSprite: "AnkleCuffRight",
+			//DisplaceLayers: ToMap(["LegCuffs"]),
+		},
+		{
+			Name: "BubblyMermaidTailAnkle", Layer: "WrappingAnklesOver", Pri: 100,
+			//Poses: ToMap([...FOOTRIGHTPOSES]),
+			Invariant: true,
+			MorphPoses: { Hogtie: "Hogtie", Kneel: "Kneel", KneelClosed: "Kneel", },
+			EraseMorph: { Closed: "Closed" },
+			EraseSprite: "BubbleTail",
+			EraseAmount: 100,
+			EraseLayers: ToMap(["BalletHeelRight"]),
+
+			//HidePoses: ToMap(["HideFootRightKneel","HideFootLeftHogtie","HideLegRight","HideLegLeft" ]),
+			//DisplacementSprite: "AnkleCuffRight",
+			//DisplaceLayers: ToMap(["LegCuffs"]),
+		},
+	])
+});
+
+AddModel(GetModelRestraintVersion("BubblyMermaidTail", true));
+
+AddModel({
+	Name: "SwimsuitArmbinder",
+	Folder: "SwimsuitArmbinder",
+	Restraint: true,
+	TopLevel: false,
+	Parent: "Armbinder",
+	AddPose: ["HideHands"],
+	Categories: ["Restraints", "Latex", "Armbinders"],
+	Layers: ToLayerMap([
+		{ 
+			Name: "Armbinder", Layer: "BindArmLeft", Pri: 30,
+			HideWhenOverridden: true,
+			Poses: ToMap(["Wristtie", "Boxtie"]),
+			//InheritColor: "Binder",
+			DisplacementSprite: "BinderLeft",
+			//DisplaceLayers: ToMap(["Arms"]),
+			//DisplaceAmount: 100,
+			Invariant: true,
+		},
+		{
+			Name: "Straps", Layer: "BindArms", Pri: 30,
+		HideWhenOverridden: true,
+		Poses: ToMap(["Wristtie", "Boxtie"]),
+		//InheritColor: "Straps",
+		Invariant: true,
+		},
+	])
+});
+
+/*
+AddModel({
+	Name: "BeltsFeet1",
+	Folder: "Belts",
+	Parent: "Belt",
+	TopLevel: false,
+	Restraint: true,
+	Categories: ["Restraints", "Leather"],
+	Layers: ToLayerMap([
+		{ Name: "Feet1", Layer: "AnklesOver", Pri: 60,
+			Invariant: true,
+		},
+	])
+});
+AddModel({
+	Name: "BeltsLegs1",
+	Folder: "Belts",
+	Parent: "Belt",
+	TopLevel: false,
+	Restraint: true,
+	Categories: ["Restraints", "Leather"],
+	Layers: ToLayerMap([
+		{ Name: "Legs1", Layer: "Thighs", Pri: 60,
+			Poses: ToMapSubtract([...LEGPOSES], ["Spread"]),
+			GlobalDefaultOverride: ToMap(["KneelClosed"]),
+			InheritColor: "Belt",
+			DisplacementMorph: {Hogtie: "Hogtie", KneelClosed: "KneelClosed"},
+			DisplacementSprite: "BeltLegs1Squish",
+			DisplaceAmount: 50,
+			DisplaceLayers: ToMap(["RibbonThighs"]),
+			NoOverride: true,
+		},
+	])
+});
+
+AddModel({
+	Name: "BeltsArms1",
+	Folder: "Belts",
+	Parent: "Belt",
+	TopLevel: false,
+	Restraint: true,
+	Categories: ["Restraints", "Leather"],
+	Layers: ToLayerMap([
+		{ Name: "Arms1", Layer: "BindChest", Pri: 50,
+			InheritColor: "Belt",
+			DisplacementSprite: "Arm2Squish",
+			DisplacementMorph: {Boxtie: "Boxtie",Wristtie: "Wristtie",Front: "Boxtie",Crossed: "Boxtie",},
+			DisplaceLayers: ToMap(["Ribbon1"]),
+			Invariant: true,
+			NoOverride: true,
+		},
+		{ Name: "LeftArm1", Layer: "BindArmLeft", Pri: 60,
+			InheritColor: "Belt",
+			Poses: ToMap(["Wristtie", "Boxtie"]),
+			NoOverride: true,
+		},
+		{ Name: "RightArm1", Layer: "BindArmRight", Pri: 60,
+			InheritColor: "Belt",
+			Poses: ToMap(["Wristtie", "Boxtie"]),
+			NoOverride: true,
+		},
+	])
+});
+*/
 
 //accessoires
 

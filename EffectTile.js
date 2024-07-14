@@ -1,3 +1,4 @@
+/*
 // new effecttiles
 KDEffectTiles["Soap"] =
 {
@@ -8,3 +9,4 @@ KDEffectTiles["Soap"] =
 }
 
 KDEffectTileTooltips['Soap'] = {color: "#02ddf5",code: (tile, x, y, TooltipList) => {KDETileTooltipSimple(tile, TooltipList, "#d952ff");}}
+*/

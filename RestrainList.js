@@ -1,70 +1,288 @@
-
 KinkyDungeonRestraints.push(
 	{
-        inventory: true,
-        name: "LatexPlugGag",
-        LinkableBy: [...KDFlatGagLink],
-        renderWhenLinked: [...KDFlatGagLink],
-        factionColor: [[0], [0], [0]],
-        gag: 0.5,
-        Color: ["#4EA1FF", "#4EA1FF", "#4EA1FF"],
-        Group: "ItemMouth",
-        power: 4, weight: -6,
-        escapeChance: { "Struggle": -0.05, "Cut": 0.09, "Remove": 0.1, Pick: 0.0 },
-        Model: "LatexPlugGag", //Model: "GagLatexMute",
-
-        maxwill: 0.5, enemyTags: {/* "latexRestraints": 6, "latexgagSpell": 10 */}, playerTags: { "ItemMouthFull": 6 }, minLevel: 0, allFloors: true, shrine: ["Latex", "FlatGags", "Gags"]
-    },
-
-	{
-        inventory: true,
-        name: "LatexPlugGagClosed",
-        LinkableBy: [...KDFlatGagLink],
-        renderWhenLinked: [...KDFlatGagLink],
-        factionColor: [[0], [0], [0]],
-        gag: 0.5,
-        Color: ["#4EA1FF", "#4EA1FF", "#4EA1FF"],
-        Group: "ItemMouth",
-        power: 4, weight: -6,
-        escapeChance: { "Struggle": -0.05, "Cut": 0.09, "Remove": 0.1, Pick: 0.0 },
-        Model: "LatexPlugGagClosed", //Model: "GagLatexMute",
-
-        maxwill: 0.5, enemyTags: {/* "latexRestraints": 6, "latexgagSpell": 10 */}, playerTags: { "ItemMouthFull": 6 }, minLevel: 0, allFloors: true, shrine: ["Latex", "FlatGags", "Gags"]
-    },
+		inventory: true,
+		name: "LatexPlugGag",
+		LinkableBy: [...KDPlugGagLink],
+		renderWhenLinked: [...KDPlugGagLink],
+		factionColor: [[0], [0], [0]],
+		gag: 0.8,
+		Color: ["#4EA1FF", "#4EA1FF", "#4EA1FF"],
+		Group: "ItemMouth",
+		power: 4, weight: -6,
+		escapeChance: { "Struggle": -0.05, "Cut": 0.09, "Remove": 0.1, Pick: 0.0 },
+		Model: "LatexPlugGag",
+		events: [
+			{ trigger: "postApply", type: "TurnTimer" },
+			{ trigger: "tick", type: "CheckHole" },
+		],
+		maxwill: 0.5, enemyTags: { "latexRestraints": 4 }, playerTags: { "ItemMouthFull": 6 }, minLevel: 0, allFloors: true, shrine: ["Latex", "PlugGags", "Gags"]
+	},
 
 	{
-        inventory: true,
-        name: "LatexSeamlessTransportJacket",
-        inaccessible: true,
-        factionColor: [[0, 1, 2]],
-        remove: ["Bra", "Tops"],
-        Asset: "StraitLeotard",
-        Modules: [1, 1, 1, 1],
-        Color: ["#499ed6", "#499ed6", "#499ed6"],
-        Group: "ItemArms",
-        bindarms: true,
-        bindhands: 1.33,
-        power: 10,
-        weight: 0,
-        strictness: 0.3,
-        LinkableBy: [...KDTransportLink],
-        renderWhenLinked: [...KDJacketRender],
-        Model: "LatexJacket",
-        playerTagsMult: {
-            "ItemArmsEmpty": 0.05,
-            "More_Jackets": 3.5,
-            "Less_Jackets": 0.1,
-        },
-        factionFilters: {
-            Chest: { color: "DarkNeutral", override: true },
-            Arms: { color: "DarkNeutral", override: true },
-            LatexLower: { color: "DarkNeutral", override: false },
-            LatexUpper: { color: "DarkNeutral", override: false },
-        },
-        escapeChance: { "Struggle": -0.275, "Cut": 0.1, "Remove": 0.1, "Pick": 0.15 },
-        limitChance: { "Struggle": 0.12, "Cut": 0.1, "Remove": 0.15, "Unlock": 0.75 },
-        maxwill: 0.1, enemyTags: {/* "latexRestraintsHeavy": -1 */}, playerTags: { "LatexStraitjacketWorn": 20, "posLatex": -1, "latexRage": 4 }, minLevel: 12, allFloors: true, shrine: ["Latex", "Straitjackets", "TransportJackets", "Block_ItemHands"]
-    },
+		inventory: true,
+		name: "MuzzlePlugGag",
+		LinkableBy: [...KDPlugGagLink],
+		renderWhenLinked: [...KDPlugGagLink],
+		factionColor: [[0], [0], [0]],
+		gag: 0.8,
+		Color: ["#4EA1FF", "#4EA1FF", "#4EA1FF"],
+		Group: "ItemMouth",
+		power: 4, weight: -6,
+		escapeChance: { "Struggle": -0.05, "Cut": 0.09, "Remove": 0.1, Pick: 0.0 },
+		Model: "MuzzlePlugGag",
+		events: [
+			{ trigger: "postApply", type: "TurnTimer" },
+			{ trigger: "tick", type: "CheckHole" },
+		],
+		maxwill: 0.5, enemyTags: { "latexRestraints": 0 }, playerTags: { "ItemMouthFull": 6 }, minLevel: 0, allFloors: true, shrine: ["Lether", "PlugGags", "Gags"]
+	},
+
+
+	{
+		inventory: true,
+		name: "SeamlessLatexTransportJacket",
+		inaccessible: true,
+		factionColor: [[0, 1, 2]],
+		remove: ["Bra", "Tops",],
+		Modules: [1, 1, 1, 1],
+		Group: "ItemArms",
+		sfxGroup: "LatexRestrainEscape",
+		bindarms: true,
+		bindhands: 1.33,
+		power: 10,
+		weight: 0,
+		strictness: 0.5,
+		LinkableBy: [...KDTransportLink],
+		renderWhenLinked: [...KDJacketRender],
+		Model: "LatexJacket",
+		events: [
+			{ trigger: "struggle", type: "StruggleLatexRestrain" },
+		],
+		playerTagsMult: {
+			"ItemArmsEmpty": 0.05,
+			"More_Jackets": 3.5,
+			"Less_Jackets": 0.1,
+		},
+		factionFilters: {
+			Chest: { color: "DarkNeutral", override: true },
+			Arms: { color: "DarkNeutral", override: true },
+			LatexLower: { color: "DarkNeutral", override: false },
+			LatexUpper: { color: "DarkNeutral", override: false },
+		},
+		escapeChance: { "Struggle": -0.275, "Cut": 0.1, "Remove": 0.1, "Pick": 0.15 },
+		limitChance: { "Struggle": 0.12, "Cut": 0.1, "Remove": 0.15, "Unlock": 0.75 },
+		maxwill: 0.1,
+		enemyTags: { "latexRestraintsHeavy": -1 },
+		playerTags: { "LatexStraitjacketWorn": 10, "posLatex": -1, "latexRage": 2 },
+		minLevel: 12,
+		allFloors: true,
+		shrine: ["Latex", "Straitjackets", "TransportJackets", "Block_ItemHands", "SeamlessStraitjackets"]
+	},
+
+
+	{
+		renderWhenLinked: [...KDLegbinderRender],
+		inventory: true,
+		//sfx: "Fwoosh",
+		name: "SeamlessLatexLegbinder",
+		inaccessible: true,
+		LinkableBy: [...KDLegbinderLink],
+		Color: ["#4e2a70"],
+		Group: "ItemLegs",
+		Model: "LatexLegbinder",
+		addPoseIfTopLevel: ["ItemFeetRubberOver"],
+		hobble: 1,
+		addTag: ["FeetLinked"],
+		power: 9,
+		weight: 0,
+		blockfeet: true,
+		escapeChance: { "Struggle": -0.25, "Cut": -0.05, "Remove": 0.1, "Pick": 0.25 },
+		maxwill: 0.2,
+		enemyTags: { "latexRestraints": 3 },
+		playerTags: { "posLatex": -1, "ItemFeetEmpty": -4, "ItemLegsEmpty": -4 },
+		minLevel: 4,
+		allFloors: true,
+		shrine: ["Latex", "Legbinders"],
+		addPoseIfTopLevel: ["ItemBootsRubberOver"],
+
+	},
+
+
+	{
+		inventory: true, name: "MaidSeamlessLatexTransportJacket", debris: "Belts", Color: ["#191919", "#A3A3A3"],
+		Model: "LatexNoChestJacket",
+		playerTagsMult: {
+			"ItemArmsEmpty": 0.05,
+			"More_Jackets": 3.5,
+			"Less_Jackets": 0.1,
+		},
+		Group: "ItemArms", bindarms: true, bindhands: 1.0, power: 10, weight: 0, strictness: 0.3,
+		LinkableBy: [...KDTransportLink], renderWhenLinked: [...KDJacketRender],
+		limitChance: { "Struggle": 0.08, "Cut": 0.02, "Remove": 0.05, "Unlock": 0.5 }, // Hard to escape the arms box by struggling
+		escapeChance: { "Struggle": -0.375, "Cut": -0.1, "Remove": -0.15, "Pick": 0.10 },
+
+		maxwill: 0.1, enemyTags: { "maidRestraintsHeavy": 1, "noMaidJacket": -5 }, playerTags: { "MaidJacketWorn": 10 },
+		minLevel: 12, allFloors: true, shrine: ["Latex", "Straitjackets", "Block_ItemHands", "TransportJackets", "SeamlessStraitjackets"]
+	},
+
+	{
+		//renderWhenLinked: [...KDLegbinderRender], 
+		//inventory: true,
+		AlwaysLinkable: true,
+		name: "BubblyMermaidLegBinder",
+		inaccessible: true,
+		factionColor: [[0]],
+		//LinkableBy: [...KDLegbinderLink], 
+		Color: ["#499ed6"],
+		Group: "ItemLegs",
+		hobble: 2,
+		blockfeet: true,
+		//addTag: ["FeetLinked"], 
+		power: 7,
+		weight: 0,
+		escapeChance: { "Struggle": -0.05, "Cut": 0.15, "Remove": 0.1, "Pick": 0.35 },
+		events: [
+			{ trigger: "tick", type: "MearmaidTailBuff", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
+			{ trigger: "postRemoval", type: "MearmaidTailBuff", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
+		],
+		Model: "BubblyMermaidTail",
+		maxwill: 0.25,
+		enemyTags: {},
+		playerTags: {},
+		minLevel: 0,
+		allFloors: true,
+		shrine: ["Legbinders", "Mermaid"]
+	},
+	{
+		inventory: true,
+		trappable: true, 
+		name: "SwimsuitArmbinder", 
+		inaccessible: true, 
+		factionColor: [[0]], 
+		strictness: 0.25, 
+		LinkableBy: [...KDArmbinderLink], 
+		Color: ["#499ed6"], 
+		Group: "ItemArms", 
+		bindarms: true, 
+		bindhands: 1.0, 
+		power: 7, 
+		weight: 0,
+		chastitybra: true,
+		chastity: true,
+		renderWhenLinked: [...KDArmbinderLink],
+		Model: "SwimsuitArmbinder",
+		Filters: {
+			Binder: {"gamma":1,"saturation":1,"contrast":1,"brightness":1,"red":1,"green":1,"blue":1,"alpha":0.6666666666666666},
+		},
+		playerTagsMult: {
+			"ItemArmsEmpty": 0.05,
+			"More_Armbinders": 3.5,
+			"Less_Armbinders": 0.1,
+		},
+		escapeChance: { "Struggle": -0.05, "Cut": 0.1, "Remove": -0.2, "Pick": 0.15 }, 
+		helpChance: { "Struggle": -0.1, "Cut": 0.2, "Remove": 0.025 }, 
+		limitChance: { "Struggle": 0.1, "Cut": 0.1, "Remove": 0.1, "Unlock": 0.5 },
+		struggleMinSpeed: {
+			Struggle: 0.005,
+		},
+		struggleMaxSpeed: {
+			Struggle: 0.01,
+		},
+		alwaysDressModel: [
+			{
+				Model: "SwimsuitUnderSwimsuit",
+				Model: "Swimsuit",
+			},
+		],
+		maxwill: 0.5,
+		enemyTags: { "swimsuits": 10 }, //enemyTags: {"latexRestraints" : 5, "latexRestraintsForced" : 15, "jailRestraints": 5}, 
+		playerTags: {"posLatex": -1, "latexAnger": 1, "latexRage": 1},
+		minLevel: 0,
+		allFloors: true,
+		shrine: ["Latex", "Armbinders", "Block_ItemHands", "SwimsuitTrap"]
+	},
+	{
+		inventory: true, 
+		trappable: true, 
+		name: "SwimsuitGag",
+		LinkableBy: [...KDPlugGagLink], 
+		renderWhenLinked: [...KDPlugGagLink],
+		Model: "BallGag", 
+		Filters: {
+			Ball: {"gamma":1,"saturation":0,"contrast":1.23111111111,"brightness":1.2311111111111,"red":0.53,"green":0.88010001010,"blue":1.9801111111,"alpha":1},
+		},
+		gag: 0.75, 
+		Color: "#1E3696", 
+		Type: "Tight", 
+		Group: "ItemMouth", 
+		power: 100, 
+		weight: 0, 
+		escapeChance: { "Struggle": -0.05, "Cut": 0.04, "Remove": 0.4, "Pick": 0.25 },
+		maxwill: 0.8, 
+		enemyTags: { "swimsuits": 10 }, 
+		playerTags: {}, 
+		minLevel: 0, 
+		allFloors: true, 
+		shrine: ["Latex", "Leather"]
+	},
+
+	{
+		inventory: true, 
+		trappable: true, 
+		debris: "Belts", 
+
+		name: "SwimsuitHarness", 
+		strictness: 0.1, 
+		harness: true,
+		accessible: true,
+
+		Model: "Harness",
+		Filters: {
+			Straps: {"gamma":2.1,"saturation":0,"contrast":1.05,"brightness":0.551111111511,"red":0.53,"green":0.88121121111,"blue":1.9800000010001,"alpha":1},
+			Hardware: {"gamma":1,"saturation":0,"contrast":0.75,"brightness":0.45333333333,"red":0.53,"green":0.8800111111111,"blue":1.9800000010001,"alpha":1},
+
+		},
+		LinkableBy: [...KDHarnessLink], 
+		OverridePriority: 26, 
+		Color: "#1E3696", 
+		Group: "ItemTorso", 
+		power: 100, 
+		weight: 2,
+		escapeChance: { "Struggle": 0.1, "Cut": 0.3, "Remove": 0.8, "Pick": 1.0 }, 
+		enemyTags: { "swimsuits": 10 }, 
+		playerTags: {}, 
+		minLevel: 0, 
+		allFloors: true, 
+		shrine: ["Leather", "Harnesses"],
+		events: [
+			{ trigger: "beforeStruggleCalc", type: "latexDebuff", power: 0.25, inheritLinked: true }
+		]
+	},
+
+	{
+		inventory: true, 
+		arousalMode: true, 
+		name: "SwimsuitPlug", 
+		Asset: "VibratingDildo", 
+		Color: ["#1E3696", "#1E3696"], 
+		Group: "ItemVulva", 
+		plugSize: 1.5, 
+		power: 3, 
+		weight: 2,
+		escapeChance: { "Struggle": 10 }, 
+		enemyTags: { "swimsuits": 10, "dressRestraints": 5 }, 
+		playerTags: { "NoVibes": -1000 }, 
+		minLevel: 0, 
+		allFloors: true, 
+		shrine: ["Vibes", "SwimsuitTrap"], 
+		linkedVibeTags: ["plugs"],
+		allowRemote: true, events: [
+			{ trigger: "tick", type: "PeriodicDenial", power: 4, time: 24, edgeOnly: true, cooldown: { "normal": 48, "tease": 20 }, chance: 0.02 },
+			{ trigger: "tick", type: "PeriodicDenial", power: 1, time: 36, edgeOnly: true, cooldown: { "normal": 60, "tease": 20 }, chance: 0.02 },
+			{ trigger: "tick", type: "PeriodicDenial", power: 3, time: 36, edgeOnly: true, cooldown: { "normal": 72, "tease": 20 }, chance: 0.005 },
+		]
+	},
+
 
 	{
 		removePrison: true,
@@ -72,9 +290,10 @@ KinkyDungeonRestraints.push(
 		removeOnLeash: false,
 		name: "Balloon",
 		Color: ["#ff77ff"],
-		Group: "ItemNeck",
+		Group: "ItemDevices",
 		power: 1,
 		weight: 1,
+		tightType: "Thick",
 		alwaysStruggleable: true,
 		Model: "Balloon",
 		addTag: ["ForceStand", "ForceKneel", "NoHogtie"],
@@ -109,7 +328,7 @@ KinkyDungeonRestraints.push(
 		playerTags: {},
 		minLevel: 0,
 		allFloors: true,
-		shrine: ["Balloons", "Collars", "HighCollars", "ModBubble"]
+		shrine: ["Balloons", "ModBubble"]
 	},
 	/*
 		//specail leash that for balloon. but couldn't
@@ -152,6 +371,7 @@ KinkyDungeonRestraints.push(
 		Group: "ItemDevices",
 		power: 3,
 		weight: 1,
+
 		sfxGroup: "BalloonEscape",
 		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
 		alwaysStruggleable: true,
@@ -189,7 +409,8 @@ KinkyDungeonRestraints.push(
 		Color: "#2277ee",
 		Group: "ItemHead",
 		power: 2,
-		blindfold: 3,
+		tightType: "Thick",
+		blindfold: 10,
 		weight: 0,
 		escapeChance: { "Struggle": -0.1, "Cut": 0.1, "Remove": -0.5 },
 		Model: "BallSuitHead",
@@ -198,7 +419,7 @@ KinkyDungeonRestraints.push(
 		playerTags: { "Furniture": -100 },
 		minLevel: 0,
 		allFloors: true,
-		shrine: [ "Encase", "Block_ItemMouth", "Block_ItemEars"]
+		shrine: ["Encase", "Block_ItemMouth", "Block_ItemEars"]
 	},
 
 	/*
@@ -221,32 +442,8 @@ KinkyDungeonRestraints.push(
 		escapeChance: {"Struggle": -0.15, "Cut": 0.1, "Remove": 0.5, "Pick": 0.25},
 		playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Latex", "Harnesses"]
 	},
-	*/
 
-	{removePrison: true, name: "Bubble", Asset: "VacCube", Color: ["#ff77ff"], Group: "ItemDevices", power: 3, weight: 1, alwaysStruggleable: true,
-	Model: "Bubble",
-	addTag: ["ForceKneel", "NoHogtie"],
-	hobble: 3,
-	heelpower: 10,
-	tightType: "Thick",
-	failSuffix: {Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble"},
-	limitChance: {
-		Cut: 0,
-		Struggle: 0.4,
-		Remove: 0.8,
-	},
-	affinity: {
-		Struggle: ["Sharp"],
-		Remove: ["Sharp"],
-	},
-	escapeChance: {"Struggle": 0, "Cut": 0.8, "Remove": 0.3},
-	helpChance: {"Struggle": 0.2, "Pick": 1.0, "Remove": .2},
-	events: [
-		{trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true},
-		{trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true},
-	],
-	enemyTags: {"bubble":100}, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "Elements", "ModBubble"], removeOnLeash: true,
-},
+	*/
 
 
 	{
@@ -254,7 +451,10 @@ KinkyDungeonRestraints.push(
 		name: "MagicSoapBubble",
 		Asset: "VacCube",
 		Color: ["#ff77ff"],
-		Group: "ItemDevices", power: 5, weight: 1,
+		Group: "ItemDevices",
+		power: 5,
+		weight: 1,
+		tightType: "Thick",
 		alwaysStruggleable: true,
 		Model: "MagicSoapBubble",
 		addTag: ["ForceKneel", "NoHogtie"],
@@ -264,12 +464,12 @@ KinkyDungeonRestraints.push(
 		heelpower: 10,
 		magic: true,
 		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
-		escapeChance: { "Struggle": -0.09, "Cut": 0.075, "Remove": -0.9 },
+		escapeChance: { "Struggle": -0.09, "Cut": -0.07, "Remove": -0.9 },
 		helpChance: { "Struggle": 0.1, "Pick": 0.5, "Remove": .1 },
 		events: [
 			{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
 			{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
-			{ trigger: "tick", type: "bubblemove" },
+			{ trigger: "tick", type: "BubbleState" },
 		],
 		enemyTags: { "magicbubble": 100 }, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "ModBubble",], removeOnLeash: true,
 	},
@@ -279,7 +479,10 @@ KinkyDungeonRestraints.push(
 		name: "SoapBubble",
 		Asset: "VacCube",
 		Color: ["#ff77ff"],
-		Group: "ItemDevices", power: 4, weight: 1,
+		Group: "ItemDevices",
+		power: 4,
+		weight: 1,
+		tightType: "Thick",
 		alwaysStruggleable: true,
 		Model: "MagicSoapBubble",
 		addTag: ["ForceKneel", "NoHogtie"],
@@ -301,12 +504,12 @@ KinkyDungeonRestraints.push(
 		events: [
 			{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
 			{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
-			{ trigger: "tick", type: "bubblemove" },
+			{ trigger: "tick", type: "BubbleState" },
+			{ trigger: "postApply", type: "BubbleState" },
+			{ trigger: "postRemoval", type: "BubbleState" },
 		],
 		enemyTags: { "soapbubble": 100 }, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "ModBubble", "MB"], removeOnLeash: true,
 	},
-
-
 
 	{
 		removePrison: true,
@@ -316,6 +519,7 @@ KinkyDungeonRestraints.push(
 		Group: "ItemDevices",
 		power: 11,
 		weight: 1,
+		tightType: "Thick",
 		alwaysStruggleable: true,
 		//immobile: true,
 		bindarms: true,
@@ -337,7 +541,7 @@ KinkyDungeonRestraints.push(
 			{ trigger: "tick", type: "callGuardFurniture", inheritLinked: true },
 			{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
 			{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
-			{ trigger: "tick", type: "bubblemove" },
+			{ trigger: "tick", type: "BubbleState" },
 			{ trigger: "tick", type: "RemoveKronosBubble", inheritLinked: true },
 		],
 		enemyTags: { "bubblesquish": 100, "KronosBubble6": 100, "KronosBubble": 100 }, playerTags: {},
@@ -347,63 +551,92 @@ KinkyDungeonRestraints.push(
 		removeOnLeash: true,
 	},
 
+	{
+		removePrison: true,
+		removeOnLeash: true,
+		name: "ClamTrap",
+		Asset: "VacCube",
+		Group: "ItemDevices",
+		inaccessible: true,
+		power: 3,
+		weight: 1,
+		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
+		alwaysStruggleable: true,
+		Model: "ClamBedClosed",
+		addTag: ["ForceKneel", "NoHogtie"],
+		immobile: true,
+		enemyTags: {},
+		playerTags: {},
+		minLevel: 0,
+		allFloors: true,
+		shrine: ["Furniture", "ModBubble", "Container"],
+		ignoreSpells: true,
+		removeOnLeash: true,
+		escapeChance: { "Struggle": -0.11, "Cut": -0.9, "Remove": -0.08},
+		helpChance: { "Remove": 0.2,},
+		events:
+			[
+				{ trigger: "struggle", type: "StruggleClam" },
+				{ trigger: "tick", type: "ClamState" },
+				{ trigger: "postRemoval", type: "Clam" },
+			]
+	},
 
+	
+	{
+		removePrison: true,
+		removeOnLeash: true,
+		name: "ClamChest",
+		Asset: "VacCube",
+		Group: "ItemDevices",
+		inaccessible: true,
+		power: 3,
+		weight: 1,
+		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
+		alwaysStruggleable: true,
+		Model: "ClamChestClosed",
+		addTag: ["ForceKneel", "NoHogtie"],
+		immobile: true,
+		enemyTags: {},
+		playerTags: {},
+		minLevel: 0,
+		allFloors: true,
+		shrine: ["Furniture", "ModBubble", "Container"],
+		ignoreSpells: true,
+		removeOnLeash: true,
+		escapeChance: { "Struggle": -0.11, "Cut": -0.9, "Remove": -0.08},
+		helpChance: { "Remove": 0.2},
+		events:
+			[
+				{ trigger: "struggle", type: "StruggleClam" },
+				{ trigger: "tick", type: "ClamState" },
+				{ trigger: "postRemoval", type: "Clam" },
+			]
+	},
 
+	{
+		removePrison: true,
+		name: "Pearl",
+		Color: ["#ff77ff"],
+		Group: "ItemDevices", power: 4, weight: 1,
+		alwaysStruggleable: true,
+		Model: "Pearl",
+		LinkableBy: ["Container"], renderWhenLinked: ["Container"],
+		addTag: ["ForceKneel", "NoHogtie"],
+		sfxGroup: "BubbleEscape",
+		hobble: 3,
+		heelpower: 10,
+		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
+		escapeChance: { "Struggle": 0.01, "Cut": 0.1, "Remove": 0.01 },
+		helpChance: { "Struggle": 0.1, "Pick": 0.5, "Remove": .1 },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	/*
-		//KronosBubble
-		{
-			unlimited: true,
-			removePrison: true,
-			name: "HardSlimeBoots",
-			//debris: "Slime",
-			linkCategory: "SlimeBoots",
-			linkSize: 0.6,
-			LinkableBy: [...KDRubberLink],
-			renderWhenLinked: [...KDRubberLink],
-			inaccessible: true,
-			Asset: "ToeTape",
-			Type: "Full",
-			Color: "#9B49BD",
-			Group: "ItemBoots",
-			blockfeet: true,
-			addTag: ["FeetLinked"],
-			power: 5,
-			weight: 0,
-			escapeChance: { "Struggle": 0, "Cut": 0.1, "Remove": 0 },
-			failSuffix: { "Remove": "SlimeHard" },
-			affinity: { Struggle: ["Sharp",], Remove: ["Hook"], },
-			factionColor: [[], [0]],
-			factionFilters: {
-				Rubber: { color: "DarkNeutral", override: true },
-			},
-			maxwill: 0.1,
-			Model: "RubberBoots",
-			addPoseIfTopLevel: ["ItemBootsRubberOver"],
-			enemyTags: { "latexEncase": 100, "latexEncaseRandom": 103 }, playerTags: {},
-			minLevel: 0, allFloors: true, shrine: ["Latex", "Encase", "SlimeHard", "Rubber"]
-		},
-	*/
+		events: [
+			{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
+			{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
+			{ trigger: "tick", type: "BubbleState" },
+		],
+		enemyTags: { "soapbubble": 100 }, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "ModBubble", "MB", "Container"], removeOnLeash: true,
+	},
 
 
 
@@ -418,6 +651,7 @@ KinkyDungeonRestraints.push(
 		power: 7,
 		weight: 0,
 		escapeChance: { "Struggle": -0.05, "Cut": 0.1, "Remove": -0.07 },
+		helpChance: { "Struggle": 0.1, "Pick": 0.5, "Remove": .1 },
 		Model: "BubbleGag",
 		maxwill: 0.8,
 		events: [
@@ -637,7 +871,7 @@ KinkyDungeonRestraints.push(
 			{ trigger: "struggle", type: "StruggleKronosUpperBody" },
 			//{ trigger: "tick", type: "H_KronosBubbleSpread" },
 			{ trigger: "postApply", type: "SH_KronosBubbleSpreadDelete" },
-			{ trigger: "tick", type: "CheckPoseKB4H"},
+			{ trigger: "tick", type: "CheckPoseKB4H" },
 			{ trigger: "postApply", type: "SetPoseKB4H" },
 
 
@@ -722,7 +956,7 @@ KinkyDungeonRestraints.push(
 		weight: 1,
 		alwaysStruggleable: true,
 		bindarms: true,
-		bindhands:  1,
+		bindhands: 1,
 		Model: "BubbleKronos5",
 		sfxGroup: "BubbleEscape",
 		addTag: ["FeetLinked"],
@@ -746,7 +980,7 @@ KinkyDungeonRestraints.push(
 		shrine: ["Furniture", "KronosBubble5", "KronosBubblesMax"],
 	},
 
-	/*
+
 	{
 		inventory: true,
 		name: "BubbleMittens",
@@ -763,32 +997,119 @@ KinkyDungeonRestraints.push(
 		allFloors: true,
 		shrine: ["Mittens"]
 	},
-	*/
-
-
-
 
 )
 
-
-
-KDSFXGroups["BalloonEscape"] =
-{
-	sfx: "BalloonStruggle",
-	sfxEscape:
+KDJailOutfits.latexRestraints.restraints = [
+	{ Name: "LatexBallGag", Level: 0 },
+	{ Name: "LatexBallGag", Level: 10, Variant: "AntiMagic", Condition: "Mage" },
+	{ Name: "PVCHarness", Level: 30 },
+	{ Name: "LatexArmbinder", Level: 30, Condition: "LessArmbinders", Priority: "MoreArmbinders" },
+	{ Name: "LatexBoxbinder", Level: 30, Condition: "LessBoxbinders", Priority: "MoreBoxbinders" },
+	{ Name: "LatexBoots", Level: 40 },
+	{ Name: "LatexCatsuit", Level: 40 },
+	{ Name: "LatexStraitjacket", Level: 60, Condition: "LessJackets", Priority: "MoreJackets" },
+	{ Name: "LatexOTNGagHeavy", Level: 60 },
+	{ Name: "LatexCorset", Level: 65 },
+	{ Name: "LatexLegbinder", Level: 80 },
+	{ Name: "LatexPlugGag", Level: 90 },
+	{ Name: "KiguMask", Level: 100, Condition: "NoKigu" },
+	{ Name: "ExpCollar", Level: 120 },
+	{ Name: "LatexTransportJacket", Level: 120, Condition: "LessJackets", Priority: "MoreJackets" },
+]
+/*
+OriginDataRestrain = [
 	{
-		Struggle: "BalloonStruggle",
-		Remove: "BalloonRemove",
+		removePrison: true,
+		name: "MagicSoapBubble",
+		Asset: "VacCube",
+		Color: ["#ff77ff"],
+		Group: "ItemDevices", 
+		power: 5, 
+		weight: 1,
+		tightType: "Thick",
+		alwaysStruggleable: true,
+		Model: "MagicSoapBubble",
+		addTag: ["ForceKneel", "NoHogtie"],
+		sfxGroup: "BubbleEscape",
+		hobble: 6,
+		restriction: 1,
+		heelpower: 10,
+		magic: true,
+		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
+		escapeChance: { "Struggle": -0.09, "Cut": 0.075, "Remove": -0.9 },
+		helpChance: { "Struggle": 0.1, "Pick": 0.5, "Remove": .1 },
+		events: [
+			{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
+			{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
+			{ trigger: "tick", type: "BubbleState" },
+		],
+		enemyTags: { "magicbubble": 100 }, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "ModBubble",], removeOnLeash: true,
 	},
-}
 
-
-KDSFXGroups["BubbleEscape"] =
-{
-	sfx: "BubbleStruggle",
-	sfxEscape:
 	{
-		Struggle: "BubbleStruggle",
-		Remove: "BalloonRemove",
+		removePrison: true,
+		name: "SoapBubble",
+		Asset: "VacCube",
+		Color: ["#ff77ff"],
+		Group: "ItemDevices", 
+		power: 4, 
+		weight: 1,
+		tightType: "Thick",
+		alwaysStruggleable: true,
+		Model: "MagicSoapBubble",
+		addTag: ["ForceKneel", "NoHogtie"],
+		sfxGroup: "BubbleEscape",
+		hobble: 3,
+		heelpower: 10,
+		failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
+		limitChance: {
+			Cut: 0,
+			Struggle: 0.4,
+			Remove: 0.8,
+		},
+		affinity: {
+			Struggle: ["Sharp"],
+			Remove: ["Sharp"],
+		},
+		escapeChance: { "Struggle": -0.03, "Cut": 0.05, "Remove": -0.5 },
+		helpChance: { "Struggle": 0.1, "Pick": 0.5, "Remove": .1 },
+		events: [
+			{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
+			{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
+			{ trigger: "tick", type: "BubbleState" },
+		],
+		enemyTags: { "soapbubble": 100 }, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "ModBubble", "MB"], removeOnLeash: true,
 	},
-}
+	
+
+	{
+	removePrison: true, name: "Bubble", Asset: "VacCube", Color: ["#ff77ff"], Group: "ItemDevices", power: 3, weight: 1, alwaysStruggleable: true,
+	Model: "MagicSoapBubble",
+	addTag: ["ForceKneel", "NoHogtie"],
+	hobble: 3,
+	heelpower: 10,
+	tightType: "Thick",
+	failSuffix: { Remove: "Bubble", Struggle: "Bubble", Cut: "Bubble" },
+	limitChance: {
+		Cut: 0,
+		Struggle: 0.4,
+		Remove: 0.8,
+	},
+	affinity: {
+		Struggle: ["Sharp"],
+		Remove: ["Sharp"],
+	},
+	escapeChance: { "Struggle": 0, "Cut": 0.8, "Remove": 0.3 },
+	helpChance: { "Struggle": 0.2, "Pick": 1.0, "Remove": .2 },
+	events: [
+		{ trigger: "afterPlayerDamage", type: "bubblePop", mult: 1.5, subMult: 0.5, count: 13, inheritLinked: true },
+		{ trigger: "beforePlayerDamage", type: "bounce", chance: 0.2, sfx: "RubberBolt", inheritLinked: true },
+	],
+	enemyTags: { "bubble": 100 }, playerTags: {}, minLevel: 0, allFloors: true, shrine: ["Furniture", "Elements", "ModBubble"], removeOnLeash: true,
+	},
+
+
+
+]
+*/

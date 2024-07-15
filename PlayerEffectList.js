@@ -1,3 +1,8 @@
+function RandomNumGen(length) {
+    return (Math.floor(Math.random() * length)) + 1
+}
+
+
 KDPlayerEffects["bubblehitted"] = (target, damage, playerEffect, spell, faction, bullet, entity) => {
 	if (KDTestSpellHits(spell, 0.5, 0.0)) {
 		let dmg = KinkyDungeonDealDamage({ damage: playerEffect?.power || spell?.power || 1, type: playerEffect?.damage || spell?.damage || damage }, bullet);

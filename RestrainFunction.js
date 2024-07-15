@@ -1,8 +1,6 @@
 function RandomNumGen(length) {
-    let random = (Math.floor(Math.random() * length)) + 1
-    return random
+    return (Math.floor(Math.random() * length)) + 1
 }
-
 
 //struggle sounds
 
